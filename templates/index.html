@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Миссия Колонизация Марса</h1>
-    <h4>И на Марсе будут яблони цвести!</h4>
+    {% if 'инженер' in profession or 'строитель' in profession %}
+        <h2>Инженерные тренажеры</h2>
+        <img src="/static/img/ing.png", alt="Name">
+    {% else %}
+        <h2>Научные симуляторы</h2>
+        <img src="/static/img/sci.png", alt="Name">
+    {% endif %}
 {% endblock %}

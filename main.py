@@ -3,10 +3,9 @@ from flask import render_template, Flask
 app = Flask(__name__)
 
 
-@app.route('/<title>')
-@app.route('/index/<title>')
-def index(title):
-    return render_template(template_name_or_list='index.html', title=title)
+@app.route('/training/<profession>')
+def training(profession):
+    return render_template(template_name_or_list='index.html', profession=profession)
 
 
 if __name__ == '__main__':
